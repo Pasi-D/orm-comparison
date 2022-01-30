@@ -1,0 +1,47 @@
+{
+  "name": "typeorm-starter",
+  "version": "1.0.0",
+  "description": "Demo nodeJS project for typeorm",
+  "main": "src/server.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
+    "serve": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/server.js",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli -f ./ormconfig.ts",
+    "migration:generate": "npm run build && typeorm migration:generate -n ",
+    "migration:run": "npm run build && typeorm migration:run",
+    "migration:revert": "npm run build && typeorm migration:revert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:Pasi-D/orm-comparison.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "TypeORM",
+    "Typescript"
+  ],
+  "author": "Pasindu Dilshan <Pasindu_dilshan@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pasi-D/orm-comparison/issues"
+  },
+  "homepage": "https://github.com/Pasi-D/orm-comparison#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
+  }
+}
