@@ -1,0 +1,46 @@
+{
+  "name": "prisma-starter",
+  "version": "0.0.1",
+  "description": "Demo nodeJS project for prisma",
+  "main": "src/server.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "build": "npm run clean && tsc",
+    "serve": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/server.js",
+    "prisma": "node_modules/.bin/prisma",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:Pasi-D/orm-comparison.git"
+  },
+  "keywords": [
+    "Prisma",
+    "nodeJS",
+    "Typescript"
+  ],
+  "author": "Pasindu Dilshan <Pasindu_dilshan@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.14.9",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1",
+    "prisma": "^3.8.1",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.8.1"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
