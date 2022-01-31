@@ -12,29 +12,29 @@ class App {
             ...connectionOptions,
             entities: ["src/entities/**/*.entity.ts"],
             migrations: ["src/migration/**/*.ts"],
-            subscribers: ["src/subscriber/**/*.ts"],
+            subscribers: ["src/subscriber/**/*.ts"]
         })
             .then(async () => {
                 const savedData = await getManager().transaction(
                     async (transactionEntityManager) => {
                         const user = User.create({
-                            email: "Harper@lee.com",
-                            firstName: "Harper",
-                            lastName: "Lee",
+                            firstName: "Dan",
+                            lastName: "Brown",
+                            email: "Dan@brown.com"
                         });
                         const profile = Profile.create({
-                            username: "Harper-Lee",
+                            username: "Dan-Brown"
                         });
 
                         const posts = Post.create([
                             {
-                                title: "How to Kill a mocking bird",
-                                content: "Shoot it with a stone",
+                                title: "The Da Vinci Code",
+                                content: "Not about coding."
                             },
                             {
-                                title: "Autobiography of Harper Lee",
-                                content: "About Harper Lee",
-                            },
+                                title: "The Lost Symbol",
+                                content: "Still lost thanks to masons."
+                            }
                         ]);
                         profile.user = user;
                         posts.map((post) => (post.author = profile));

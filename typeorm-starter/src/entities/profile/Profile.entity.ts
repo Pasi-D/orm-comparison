@@ -5,7 +5,7 @@ import {
     BaseEntity,
     OneToOne,
     JoinColumn,
-    OneToMany,
+    OneToMany
 } from "typeorm";
 import { User } from "../user/User.entity";
 import { Post } from "../post/Post.entity";

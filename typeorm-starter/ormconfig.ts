@@ -12,6 +12,6 @@ module.exports = {
     cli: {
         entitiesDir: "src/entities",
         migrationsDir: "src/migration",
-        subscribersDir: "src/subscriber",
-    },
+        subscribersDir: "src/subscriber"
+    }
 };

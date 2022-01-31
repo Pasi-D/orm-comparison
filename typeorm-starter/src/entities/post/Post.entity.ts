@@ -3,7 +3,7 @@ import {
     PrimaryGeneratedColumn,
     Column,
     BaseEntity,
-    ManyToOne,
+    ManyToOne
 } from "typeorm";
 import { Profile } from "../profile/Profile.entity";
 
