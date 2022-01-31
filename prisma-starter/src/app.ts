@@ -8,7 +8,7 @@ class App {
         // Execute Prisma query here
         const result = null;
 
-        console.log(`Query Result : ${JSON.stringify(result)}`);
+        console.log(`Query Result : ${JSON.stringify(result, null, 2)}`);
         process.exit();
     }
 }

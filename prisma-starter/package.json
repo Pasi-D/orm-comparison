@@ -39,8 +39,5 @@
   },
   "dependencies": {
     "@prisma/client": "^3.8.1"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
   }
 }
